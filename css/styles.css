@@ -60,6 +60,13 @@ body{
 a{ color: inherit; }
 :focus-visible{ outline: 2px solid var(--sky-300); outline-offset: 3px; }
 
+/* Justified body copy, with hyphens so justify doesn't create ugly gaps */
+p, .lede, .hero-tagline, .section-body p{
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+}
+
 .wrap{
   max-width: var(--wrap);
   margin: 0 auto;
@@ -174,8 +181,10 @@ a{ color: inherit; }
 }
 .hero h1{
   font-family: var(--font-display); font-weight: 500;
-  font-size: clamp(3rem, 6.2vw, 5.4rem); line-height: 1.0; margin: 0 0 26px;
+  font-size: clamp(2.1rem, 6.2vw, 5.4rem); line-height: 1.05; margin: 0 0 26px;
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .hero h1 span{ color: var(--sky-500); font-style: italic; font-weight: 400; }
 
